@@ -1,0 +1,13 @@
+.friends {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.friend {
+    background-color: firebrick;
+    margin-left: 20px;
+    text-align: center;
+    color: white;
+    border: 10px solid black;
+}
