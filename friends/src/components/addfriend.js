@@ -22,7 +22,8 @@ const AddFriend = (props) => {
         e.preventDefault();
         axiosWithAuth().post("/friends", addFriend)
         .then(res => {
-                console.log(res)
+                // console.log(res)
+                props.history.push("/friends")
         })
         .catch(err => { 
         console.log(err)})
@@ -50,7 +51,7 @@ const AddFriend = (props) => {
                         <div className="form-group">
                             <input type="text" onChange={handleChange} name="id" className="form-control"  placeholder="Friend ID *" value={addFriend.id} />
                         </div>
-                        <div className="form-group"><center>  <input type="submit" className="btnSubmit" value="Login" /></center>
+                        <div className="form-group"><center>  <input type="submit" className="btnSubmit" value="Add Friend" /></center>
                           
                         </div>
                     </form>

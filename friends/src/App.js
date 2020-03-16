@@ -6,8 +6,9 @@ import Friends from './components/friends';
 import Navigation from './components/navigation';
 import PrivateRoute from './components/privateroute';
 import AddFriend from './components/addfriend';
+import { Logout } from './components/logout';
 
-function App() {
+function App(props) {
   return (
     <Router>
   
@@ -17,6 +18,7 @@ function App() {
      <Switch>
        <PrivateRoute exact path="/friends" component={Friends} />
        <PrivateRoute exact path="/addfriend" component={AddFriend} />
+       <Route path="/logout"  component={Logout} />
        <Route path="/login" component={Login} />
        <Route component={Login} />
      </Switch>
