@@ -12,8 +12,6 @@ const Login = (props) => {
         }
     )
 
-    const [isLoading, setIsLoading] = useState(true)
-
     const handleChange =  e => {
         setLogin({...login, [e.target.name]: e.target.value});
       };
@@ -36,11 +34,14 @@ const Login = (props) => {
 
     return (
         <>
-        
-   
+         
+      <center>
         <div className="container login-container">
+         
             <div className="row">
-                <div className="col-md-6 login-form-1">
+          
+                <div className="col-md-12 login-form-1">
+                  <p>  LOGIN TO FRIENDS NETWORK </p>
                     <form onSubmit={handleSubmit}> 
                         <div className="form-group">
                             <input type="text" onChange={handleChange}  name="username" className="form-control" placeholder="Login *" value={login.username} />
@@ -56,7 +57,7 @@ const Login = (props) => {
             </div>
             </div>
     
-
+            </center>
         </>
     )
 }

@@ -26,7 +26,8 @@ const Friends = () =>  {
 
 
 return (
-    (isLoading ? <center><div><Loader type="Puff" color="#204963" height="60" width="60" />
+    (isLoading ? <center>
+    <div><Loader type="Puff" color="#204963" height="60" width="60" />
     <p>Loading Data</p> </div></center> : 
     <div className="friends">
     {friends.map(x => {
